@@ -4,7 +4,7 @@ node {
   echo "Hello World"
 }
 ```
-
+- 1 stage
 ```
 pipeline {
  agent any
@@ -18,6 +18,7 @@ pipeline {
 }
 
 ```
+- parm
 ```
 pipeline {
  agent any
@@ -34,7 +35,7 @@ pipeline {
 }
 
 ```
-
+- 2 stages
 ```
 pipeline {
  agent any
