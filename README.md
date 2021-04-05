@@ -34,3 +34,21 @@ pipeline {
 }
 
 ```
+
+```
+pipeline {
+ agent any
+ stages {
+     stage("Build") {
+         steps {
+            sh 'echo "Build"'
+         }
+     }
+     stage("BuildMore") {
+        steps {
+         sh 'echo "Buildmore"'
+        }
+     }
+ }
+}
+```
