@@ -29,7 +29,10 @@ ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
 
 sudo systemctl daemon-reload
 sudo systemctl restart docker
-sudo usermod -a -G docker jenkins
+
+sudo usermod -aG docker jenkins
+sudo usermod -aG root jenkins
+sudo chmod 664 /var/run/docker.sock
 
 
 ```
