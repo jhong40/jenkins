@@ -14,18 +14,19 @@ journalctl -xe
 
 
 Slave Node:
+```
 apt update; apt install -y openjdk-8-jdk
 useradd -m -s /bin/bash jenkins
 password jenkins
-
+```
 
 Master:
+```
 ssh-keygen -t rsa -b 2048
 
 ssh-copy-id jenkins@172.16.150.12  #add pub key to authorized_keys on the slave
-
-
 ```
+
 node {
   echo "Hello World"
 }
