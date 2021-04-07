@@ -23,6 +23,8 @@ ssh-keygen -t rsa -b 2048
 ssh-copy-id jenkins@172.16.150.12  #add pub key to authorized_keys on the slave
 
 ```
+# Jenkins code
+```
 node {
   echo "Hello World"
 }
