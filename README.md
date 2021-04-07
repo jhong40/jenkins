@@ -4,8 +4,8 @@
 Slave Node:
 ```
 sudo apt update; sudo apt install -y openjdk-8-jdk
-useradd -m -s /bin/bash jenkins
-password jenkins
+sudo useradd -m -s /bin/bash jenkins
+sudo passwd jenkins
 ```
 
 Master:
