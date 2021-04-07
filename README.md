@@ -22,6 +22,16 @@ sudo su - jenkins
 ssh-keygen -t rsa -b 2048
 ssh-copy-id jenkins@172.16.150.12  #add pub key to authorized_keys on the slave
 
+# adding docker 
+sudo apt update; sudo apt install -y docker
+vi /lib/systemd/system/docker.service
+ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock -H tcp://0.0.0.0:4243
+
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+
+
+
 ```
 # Jenkins code
 ```
@@ -76,5 +86,20 @@ pipeline {
         }
      }
  }
+}
+```
+- docker
+```
+pipeline {
+    agent {
+        docker { image 'node:9-alpine' }
+    }
+    stages {
+        stage("Test") {
+            steps {
+                sh 'node --version'
+            }
+        }
+    }
 }
 ```
