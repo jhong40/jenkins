@@ -15,7 +15,7 @@ journalctl -xe
 
 Slave Node:
 ```
-apt update; apt install -y openjdk-8-jdk
+sudo apt update; sudo apt install -y openjdk-8-jdk
 useradd -m -s /bin/bash jenkins
 password jenkins
 ```
