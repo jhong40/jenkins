@@ -109,3 +109,19 @@ pipeline {
     }
 }
 ```
+
+```
+pipeline {
+    agent {
+        label 'metal'
+    }
+    stages {
+        stage("Test") {
+            steps {
+                sh 'echo "Hello"'
+                sh 'hostname'
+            }
+        }
+    }
+}
+```
