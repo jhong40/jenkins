@@ -109,7 +109,7 @@ pipeline {
     }
 }
 ```
-
+- Label
 ```
 pipeline {
     agent {
