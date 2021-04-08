@@ -137,3 +137,21 @@ pipeline {
     }
 }
 ```
+- Archive
+```
+pipeline {
+    agent any
+    stages{
+        stage('Build') {
+            steps{
+                sh 'echo "We are generating artifacts for ${BUILD_NUMBER}" > output.txt'
+            }
+        }
+        stage('Archive') {
+            steps {
+                archiveArtifacts artifacts: 'output.txt', onlyIfSuccessful: true
+            }
+        }
+    }
+}
+```
