@@ -38,6 +38,7 @@ sudo systemctl restart docker
 ```
 
 # REST API
+![Image of Yaktocat](./admintoken.png)
 Get the Crumb, the subsequent request needs Crumb
 ```
 curl --user "admin:11820e2eff344ed20163f858414fb4a2f0" 'http://172.16.110.73:8080/crumbIssuer/api/xml?xpath=concat(//crumbRequestField,":",//crumb)' 
