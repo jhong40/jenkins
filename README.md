@@ -35,10 +35,15 @@ sudo usermod -aG root jenkins
 sudo chmod 664 /var/run/docker.sock
 
 sudo systemctl restart docker
-
-
-
 ```
+
+# REST API
+Get the Crumb, the subsequent request needs Crumb
+```
+curl --user "admin:11820e2eff344ed20163f858414fb4a2f0" 'http://172.16.110.73:8080/crumbIssuer/api/xml?xpath=concat(//crumbRequestField,":",//crumb)' 
+curl -X POST http://172.16.110.73:8080/job/agent-labels-pipeline/build --user admin:11820e2eff344ed20163f858414fb4a2f0 --data-urlencode json='' -H "Jenkins-Crumb:b2184c0ec248fd0be50535506dc00dde13515d31ae440ddb1dac1633ae1c0624"
+```
+
 # Jenkins code
 ```
 node {
