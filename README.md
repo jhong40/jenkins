@@ -48,6 +48,8 @@ curl -X POST http://172.16.110.73:8080/job/agent-labels-pipeline/build --user ad
 # check job status
 curl  -s --user admin:11820e2eff344ed20163f858414fb4a2f0 http://172.16.110.73:8080/job/agent-labels-pipeline/lastBuild/api/json | python -mjson.tool
 ```
+# Audit
+Audit plugin
 
 # Jenkins code
 ```console
