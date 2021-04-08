@@ -2,7 +2,7 @@
 - Install
 
 Slave Node:
-```shell
+```console
 sudo apt update; sudo apt install -y openjdk-8-jdk
 sudo useradd -m -s /bin/bash jenkins
 sudo passwd jenkins
