@@ -61,11 +61,15 @@ curl  -s --user admin:11820e2eff344ed20163f858414fb4a2f0 http://172.16.110.73:80
 
 [Create Job using REST API and curl](https://support.cloudbees.com/hc/en-us/articles/220857567-How-to-create-a-job-using-the-REST-API-and-cURL-)
 ```
+# get base
 curl -X GET http://172.16.110.73:8080/job/simple1step/config.xml -u admin:11820e2eff344ed20163f858414fb4a2f0 -o myconfig.xml
+# modify
 vi myconfig.xml
+# create new job
 curl -s -XPOST 'http://172.16.110.73:8080/createItem?name=JobcreatedbyRest' -u admin:11820e2eff344ed20163f858414fb4a2f0 --data-binary @myconfig.xml -H "Content-Type:text/xml"
+# run the new job
 curl -X POST http://admin:11820e2eff344ed20163f858414fb4a2f0@localhost:8080/job/JobcreatedbyRest/build
-
+# check result
 curl  -s --user admin:11820e2eff344ed20163f858414fb4a2f0 http://172.16.110.73:8080/job/JobcreatedbyRest/lastBuild/api/json | python -mjson.tool
 ```
 
