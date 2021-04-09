@@ -155,3 +155,22 @@ pipeline {
     }
 }
 ```
+- Manual Approval
+```
+pipeline {
+ agent any
+ stages {
+     stage("Build") {
+         steps {
+            sh 'echo "Build"'
+         }
+     }
+     stage("BuildMore") {
+        steps {
+         input message: "Shall we build more?"
+         sh 'echo "Buildmore"'
+        }
+     }
+ }
+}
+```
