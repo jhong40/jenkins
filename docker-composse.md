@@ -1,3 +1,4 @@
+```
 version: '3'
 services:
   jenkins:
@@ -26,3 +27,9 @@ services:
       - net
 networks:
   net:
+```
+```
+mysql -u root -p
+
+mysql>
+```
