@@ -30,7 +30,8 @@ networks:
   net:
 ```
 ```
-mysql -u root -p
+mysql -u root -p  (-h db)
 
-mysql>
+mysql> create database testdb;
+mysql> show databases;
 ```
