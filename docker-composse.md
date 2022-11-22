@@ -59,4 +59,14 @@ mysql> desc info;
 | age      | int(20)     | YES  |     | NULL    |       |
 +----------+-------------+------+-----+---------+-------+
 
+ysql> insert into info values ('jerry', 'hong', 20);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from info;
++-------+----------+------+
+| name  | lastname | age  |
++-------+----------+------+
+| jerry | hong     |   20 |
++-------+----------+------+
+1 row in set (0.00 sec)
 ```
