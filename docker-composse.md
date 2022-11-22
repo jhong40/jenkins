@@ -34,4 +34,29 @@ mysql -u root -p  (-h db)
 
 mysql> create database testdb;
 mysql> show databases;
+
+ysql> use testdb;
+Database changed
+
+mysql> create table info (name varchar(20), lastname varchar(20), age int(20));
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> show tables;
++------------------+
+| Tables_in_testdb |
++------------------+
+| info             |
++------------------+
+1 row in set (0.00 sec)
+
+
+mysql> desc info;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| name     | varchar(20) | YES  |     | NULL    |       |
+| lastname | varchar(20) | YES  |     | NULL    |       |
+| age      | int(20)     | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+
 ```
