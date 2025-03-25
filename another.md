@@ -1,5 +1,5 @@
 Jenkinsfile
-Declaritive: SCM checkout automatically, can restart from specific stage
+Declaritive: SCM checkout automatically, can restart from specific stage <b>
 Scripted: cannot do the above
 
 ![image](https://github.com/user-attachments/assets/394e4f6c-f509-447a-acaf-c3e09ebef983)
